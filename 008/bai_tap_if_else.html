@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var curDate = new Date();
+ 
+ // Lấy giờ hiện tại
+ var time = curDate.getHours();
+ if (time < 10) {
+      greeting = "Good morning";
+ } else if (time < 20) {
+      greeting = "Good day";
+ } else {
+      greeting = "Good evening";
+ }
+ alert(greeting);
+// switch (new Date().getDay()) {
+//   case 6:
+//     text = "Today is Saturday";
+//     break;
+//   case 0:
+//     text = "Today is Sunday";
+//     break;
+//   default:
+//     text = "Looking forward to the Weekend";
+// }
+document.write(text); 
+switch (new Date().getDay()) {
+  case 1:
+  case 2:
+  case 3:
+  default:
+    text = "Looking forward to the Weekend";
+    break;
+  case 4:
+  case 5:
+    text = "Soon it is Weekend";
+    break;
+  case 0:
+  case 6:
+    text = "It is Weekend";
+}
+document.write(text)
+    </script>
+</body>
+</html>
