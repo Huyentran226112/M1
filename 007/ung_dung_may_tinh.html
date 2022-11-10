@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <h1>Caculator</h1>
+        <input type="text" id="so_a" value="">
+        <input type="text" id="so_b" value=""><br>
+    </form>
+    <input onclick="Addition()" type="button" value="Addition(+)">
+    <input onclick="Subtraction()" type="button" value="Subtraction(-)">
+    <input onclick="Multiplication()" type="button" value="Muliplication(*)">
+    <input onclick="Divison()" type="button" value="Divison(/)">
+    <h3>ket_qua</h3>
+    <P id="ket_qua"></P>
+
+    <script>
+        function Addition() {
+            let so_a = document.getElementById("so_a").value;
+            let so_b = document.getElementById("so_b").value;
+            console.log('so A', so_a);
+            console.log('so B', so_b);
+            // chuyen doi kieu du lieu
+            so_a = parseInt(so_a);
+            so_b = parseInt(so_b);
+            let ket_qua = so_a + so_b;
+            document.getElementById("ket_qua").innerHTML = ket_qua;
+            
+
+        }
+        function Subtraction() {
+            let so_a = document.getElementById("so_a").value;
+            let so_b = document.getElementById("so_b").value;
+            so_a = parseInt (so_a);
+            so_b = parseInt (so_b);
+            let ket_qua = so_a - so_b;
+            document.getElementById("ket_qua").innerHTML = ket_qua;
+        }
+        function Multiplication() {
+            let so_a = document.getElementById("so_a").value;
+            let so_b = document.getElementById("so_b").value;
+            so_a = parseInt (so_a);
+            so_b = parseInt (so_b);
+            let ket_qua = so_a * so_b;
+            document.getElementById("ket_qua").innerHTML = ket_qua;
+        }
+        function Divison(){
+            let so_a = document.getElementById("so_a").value;
+            let so_b = document.getElementById("so_b").value;
+            so_a = parseInt(so_a);
+            so_b = parseInt(so_b);
+            let ket_qua = so_a / so_b;
+            document.getElementById("ket_qua").innerText = ket_qua;
+        
+        }
+
+    </script>
+
+</body>
+
+</html>
