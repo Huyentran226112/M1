@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    so a <input type="text" id="so_a" value=""><br>
+    so b <input type="text" id="so_b" value=""><br>
+    <input type="button" value="xu_ly" onclick="xu_ly()">
+    <p id="ket_qua">inner</p>
+    <script>
+        document.getElementById('ID_CUA_THE').addEventListener('TEN_SU_KIEN', function () {
+
+        })
+        // bat xu kien qua java
+        document.getElementById('nut').addEventListener('click', function () {
+
+        })
+        // tao khoi xu ly co ten la xu ly
+        function xu_ly() {
+            // alert(123);
+            let so_a = document.getElementById('so_a').value;
+            //   tim phan tu co id la so b 
+            let so_b = document.getElementById('so_b').value;
+            // console.log('so A',so_a);
+            // console.log('so B',so_b);
+            let ket_qua = so_a * so_b;
+            alert(ket_qua);
+            // alert(ket_qua)
+            document.getElementById('ket_qua').innerHTML = '<strong>' + ket_qua + '</strong>';
+        }
+// Text:chi hien thi chu
+// html: hien thi the html 
+    </script>
+</body>
+
+</html>
