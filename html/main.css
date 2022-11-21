@@ -1,0 +1,18 @@
+h1{
+    color: red;
+}
+#box{
+    background-color: #ccc;
+    height: 100px;
+}
+#box h2{
+    color: blue;
+}
+ 
+.img{
+    margin top: 20px;
+    background-color: #accc;
+}
+#box h3{
+     color:yellow;
+}

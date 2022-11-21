@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>select a new car from the list.</p>
+    <select id="myselect">
+        <option value="audi">audi</option>
+        <option value="bmw">bmw</option>
+        <option value="meseder">meseder</option>
+        <option value="volou">volou</option>
+     </select>   
+    <script>
+        var selectedElement = document.getElementById("myselect");
+        selectedElement.addEventListener("change",changeFunction);
+        function changeFunction() {
+            var selectvalue = document.getElementById("myselect").value;
+            alert(selectvalue);
+        }
+        
+
+    </script>
+
+    
+</body>
+</html>

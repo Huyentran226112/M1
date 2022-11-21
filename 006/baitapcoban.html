@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  so_a<input type="text" id="so_a" value=""><br>
+  so_b<input type="text" id="so_b" value=""><br>
+     <input type="button" value="xu_ly" onclick="xu_ly()"><br>
+
+<script>
+    function xu_ly(){
+        let so_a = document.getElementById('so_a').value;  
+        let so_b = document.getElementById('so_b').value; 
+        console.log(so_a);
+        let ket_qua = so_a * so_b;
+       alert(ket_qua) 
+       
+    }
+
+
+ </script>   
+</body>
+</html>
