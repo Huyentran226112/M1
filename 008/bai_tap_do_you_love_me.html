@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>DO YOU LOVE ME?</h1>
+    <button onclick="xu_ly_yes()"> YES </button>
+    <input type="button" id="btnNo" value="  NO  " onmouseover="noHover()"
+        style="position:absolute; left:360px; top:235px;" />
+    <script>
+        function xu_ly_yes() {
+            alert(' yes. you are right')
+        }
+        function noHover() {
+            var x = Math.round(Math.random() * window.innerWidth);
+            var y = Math.round(Math.random() * window.innerHeight);
+            document.getElementById('btnNo').style.left = x + 'px';
+            document.getElementById('btnNo').style.top = y + 'px';
+        }         
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var str = 'The Quick Brown Fox';
+        var b = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        var c = 'abcdefghijklmnopqrstuvwxyz';
+        var result = [];
+        for (var i = 0; i < str.length; i++) {
+            if (b.indexOf(str[i]) !== -1) {
+                result.push(str[i].toLowerCase());
+            } else if (c.indexOf(str[i]) !== -1) {
+                result.push(str[i].toUpperCase());
+            }
+            else {
+                result.push(str[i]);
+            }
+        }
+        console.log(result.join(''));
+
+
+
+    </script>
+</body>
+
+</html>

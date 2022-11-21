@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>TÍNH CHỈ SỐ CÂN NẶNG</h1>
+    <table for="">Nhập cân nặng của bạn:(kg)</table>
+    <input type="text" name="" id="can_nang" value><br><br>
+
+    <table for="chieu cao">Nhập chiều cao của bạn :(m)</table>
+    <input type="text" name="" id="chieu_cao" value=""><br><br>
+    <button onclick="kiem_tra()">kiểm tra</button><br>
+    <p id="result"></p>
+    <script>
+        function kiem_tra() {
+            let can_nang = document.getElementById("can_nang").value;
+            let chieu_cao = document.getElementById("chieu_cao").value;
+            //    let bmi = can_nang/(math*pow(chieu_cao, 2))
+            let bmi = (can_nang) / (chieu_cao * 2)
+            let result = ""
+
+            if (bmi >16) {
+                document.write("gầy mức độ 3")
+            }
+            else if (bmi >17) {
+                document.write("gầy mức độ 2")
+            }
+            else if (bmi > 18.5) {
+                document.write("gầy mức độ 1")
+            }
+            else if (bmi > 25) {
+                document.write(" mức độ bình thường ")
+            }
+            else if (bmi > 35) {
+                document.write(" mức độ béo 3")
+            }
+            else if (bmi > 40) {
+                document.write(" mức độ 2")
+            }
+            else {
+                document.write("mức độ béo 1")
+            }
+        }
+
+
+
+    </script>
+
+    </table>
+
+
+</body>
+
+</html>
