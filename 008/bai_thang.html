@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>KIỂM TRA SỐ NGÀY TRONG THÁNG</h1>
+    <table>
+        <tr>
+            <input type="text" id="nhapthang" placeholder="nhap thang" value><br><br>
+            <button onclick="check()">check</button>
+        </tr>
+        <P id="ket_qua"></P>
+    </table>
+    <script>
+// cach 1 dung by id o dang so 
+        function check() {
+            var thang = +document.getElementById('nhapthang').value
+            var ket_qua;
+            switch (thang) {
+                case 1:
+                case 4: 
+                case 9:
+                case 11:
+                ket_qua='thang co 30 ngày'
+                    break;
+                case 5:
+                case 7:
+                case 10:
+                case 12:
+                ket_qua='thang co 31 ngày'
+                    break;
+                default:
+                ket_qua='thang co 28 hoac 29 ngày'
+
+                    break;
+            }
+            document.getElementById("ket_qua").innerText = ket_qua;
+        }
+       
+    </script>
+</body>
+
+</html>

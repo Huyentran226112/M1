@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let arr = [2, 2, 1, 2, 5,  1, 5, 3, 4, 6, 6 , 6 , 5 , 5];
+
+const obj = arr.reduce((a, c, i) => {
+   a[c] = a[c] || {c};
+   if (i === 0) {
+      a.largeValue = c;
+      a.largerValue = c;
+      a.largestValue = c;
+   }
+   else {
+      if (c > a.largeValue && c < a.largerValue && c > a.largestValue) {
+         a.largeValue = c;
+      }
+      else if (c > a.largeValue && c > a.largerValue) {
+         if (a.largerValue == a.largestValue) {
+            a.largerValue = c;
+         }
+         else {
+            a.largestValue = c;
+         }
+      }
+   }
+   return a;
+},{ largeValue: 0, largerValue: 0, largestValue: 0 });
+
+console.log(obj.largerValue);
+    </script>
+</body>
+</html>

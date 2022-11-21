@@ -1,30 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
     <script>
-        let a = 4;
-        let b = -2;
-        if (a == 0) {
-            if (b == 0) {
-                alert('phuong trinh vo so nghiem')
-            } else {
-                alert('phuong trinh vo nghiem')
+
+        let numbers = [-3, 5, 1, 3, 2, 10];
+        let max = numbers[0];
+        let index=0;
+        for (let i = 0; i < numbers.length; i++) {
+            if( max < numbers[i] ){
+                max = numbers[i]
+                index=i;
             }
-        }else{
-            alert('phuong trinh co nghiem bang x= -b/a')
         }
-    
+        alert("max: " + max + " at position " + index)
         
-   
+
     </script>
 </body>
-
 </html>

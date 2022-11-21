@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      
+
+    // Mang da chieu la mang chua cac mang khac ben trong
+        // let cau_thu = [
+        //     ['cr7', 'messi','bruno'],
+        //     ['mu', 'psg', 'mu']
+        // ];
+        // console.log(cau_thu);
+        let tu_sach = [
+            ['Van','Su', 'Dia'], //0
+           //  0    1      2 
+            ['Toan', 'Ly', 'Hoa']//1
+           //  0     1      2 
+        ];
+        // truy cap vao tung phan tu cua mang
+        console.log( tu_sach[0][1] );//Su
+        console.log(tu_sach[0][2]);//Dia
+        console.log(tu_sach[1][0]); // toan
+
+        //them mot phan tu vao mang
+        // tu_sach[0].push('Sinh');
+        // tu_sach[1].push('Anh');
+        // tu_sach[0][3] = 'Sinh';
+        // tu_sach[1][3] = 'Anh';
+        // thay doi phan tu trong mang
+        tu_sach[0][0] = 'Van Hoc';
+        tu_sach[1][1] = 'Vat Ly';
+        tu_sach[1][0] = 'Toan Hoc';
+
+        //lay tong phan tu trong mang
+        // console.log( tu_sach.length );//2
+
+        //duyet mang
+        for( let h = 0; h < tu_sach.length; h++ ){
+            /*
+            h0
+                c0
+                c1
+                c2
+                tu_sach[0][0]
+                tu_sach[0][1]
+                tu_sach[0][2]
+            h1
+                tu_sach[1][0]
+                tu_sach[1][1]
+                tu_sach[1][2]
+            */
+            for( let c = 0; c < tu_sach[h].length; c++ ){
+                console.log(tu_sach[h][c]);
+            }
+        }
+
+
+         
+
+    </script>
+</body>
+</html>

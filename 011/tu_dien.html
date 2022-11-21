@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table for="string">nhập từ: </table>
+    <input type="text" name="" id="string">
+    <button onclick="transcript()">dịch</button>
+    <p id="result"></p>
+    <script>
+        function transcript() {
+            let ket_qua;
+            let tu_can_tim = document.getElementById("string").value;
+            let tieng_anh = ['banana', 'apple', 'orange'];
+            let tieng_viet =['chuối', 'táo', 'cam'];
+            let vi_tri = tieng_anh.indexOf(tu_can_tim);
+            ket_qua=(tieng_viet[vi_tri]);
+            document.getElementById("result").innerText = ket_qua;
+
+        }
+    </script>
+</body>
+
+</html>
+ 
