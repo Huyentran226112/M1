@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">so a</label>
+    <input type="text" id= "a"><br>
+    <select name="" id="phep_tinh">
+        <option value="+">cong</option>
+        <option value="-">tru</option>
+        <option value="*">nhan</option>
+        <option value="/">chia</option>
+    </select><br>
+    <label for="">so b</label>
+    <input type="text" id= "b">
+    <button onclick="tinh()">tinh</button>
+    <label for="" id="ket_qua"></label>
+
+    <script> 
+    function cong ( a,b){
+        return a+b;
+    } 
+    function tru ( a,b){
+        return a-b;
+    }
+    function nhan(a,b) {
+        return a*b;
+    }
+    function chia (a,b) {
+        if ( b==0){
+            return ' mau so phai lon hon 0';
+        }else{
+
+            return a/b;
+        }
+    }
+    function tinh(){
+        var a = parseInt(document.getElementById('a').value);
+        var b = parseInt(document.getElementById('b').value);
+        var phep_tinh  = document.getElementById('phep_tinh').value;
+        switch (phep_tinh) {
+            case "+":
+                document.getElementById('ket_qua').innerHTML= cong(a,b)
+            break;
+            case "-":
+                document.getElementById('ket_qua').innerHTML= tru(a,b)
+            
+            break;
+            case "*":
+                document.getElementById('ket_qua').innerHTML= nhan(a,b)
+            
+            break;
+            case "/":
+                document.getElementById('ket_qua').innerHTML= chia(a,b)
+            
+            break;
+            default:
+                break;
+        }
+    }
+
+    </script>
+</body>
+
+</html>
+<!-- /*
+    Viet chuong trinh may tinh, dau vao la 2 so a,b,phep_tinh
+    
+    Khai bao 4 ham thuc hien cong,tru,nhan,chia có đầu vào a,b và thực hiện logic tương ứng
+    và có sự trả về là kết quả của biểu thức trên
+​
+    Gán vào biến ket_qua
+    Dua theo cau truc dieu kien de thuc hien cac phep tinh tuong ung + - * /switch case
+    In ra ket_qua
+    */
+​
+    // KHai bao ham
+    // Input
+    // Xu ly cau truc dieu kien
+    // In ra ket qua --> 

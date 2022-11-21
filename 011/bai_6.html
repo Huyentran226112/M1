@@ -7,10 +7,31 @@
     <title>Document</title>
 </head>
 <body>
+    <label for="">nhap v</label>
+    <input type="text" id="value">
+    <button onclick="check()">kiem tra</button>
+    <label for=""id="ket_qua"></label>
     <script>
-        var number =[12,14,5,6,44,3,6,9,78,45]
-        var f = 0;
+        function check(){
+            var arr = [12,14,5,6,44,3,6,9,78,45];
+            var ket_qua="";
+            let v = parseInt(document.getElementById("value").value);
+            for(let i = 0;i<arr.length;i++){
+                if(v == arr[i]){
+                    ket_qua = v + ' is in the array ';
+                    break;
+                }else {
+                    ket_qua = v + ' is not in the array ';
+                }
+            } 
+            document.getElementById("ket_qua").innerHTML =ket_qua;           
+
+        }
         
+      
+       
+
     </script>
 </body>
 </html>
+   

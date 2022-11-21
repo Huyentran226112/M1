@@ -11,16 +11,28 @@
 <body>
     <script>
 
-        function lasonguyenam(value) {
-            return (Number.isInteger(value) && value < 0);
+    //     function lasonguyenam(value) {
+    //         return (Number.isInteger(value) && value < 0);
 
-        }
-        console.log(lasonguyenam(-1));
-        console.log(lasonguyenam(-1.2));
-        console.log(lasonguyenam(5));
-        console.log(lasonguyenam(4));
-        console.log(lasonguyenam(-5));
-    let a = (-6 ,-54);
+    //     }
+    //     console.log(lasonguyenam(-1));
+    //     console.log(lasonguyenam(-1.2));
+    //     console.log(lasonguyenam(5));
+    //     console.log(lasonguyenam(4));
+    //     console.log(lasonguyenam(-5));
+    // let a = (-6 ,-54);
+    var arr = new Array();
+        for (i = 0; i < 5; i++) {
+            arr[i] = parseInt(prompt('nhập phần tử chứa số nguyên âm'));
+        } document.write("(" + arr + ") ");
+        var count = 0
+        for (k = 0; k < arr.length; k++) {
+            if (arr[k] < 0) {
+                count++;
+
+            }
+        } document.write('<br>' + count)
+
     
 
     </script>
