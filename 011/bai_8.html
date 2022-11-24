@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="" id>nhap v</label>
+    <input type="text" id=" value">
+    <button onclick="check()">ket_qua</button>
+
+    <script>
+        let n = [12, 45, 78, 14, 36, 58, 41, 79, 32, 49]
+        let v = parseInt(document.getElementById('value').value);
+        for (let i = 0; i < n.length; i++) {
+            if (v == n[i]) {
+                let x = i;
+                count++;
+            }
+            for (let j = 0; j < n.length; j++) {
+                n[j] = n[i++]
+                if (j = n.length - 1) {
+                    n[j] = 0;
+                }
+            }
+          console.log(n);  
+        }   
+       if(i==n.length-1 && count==0) {
+         document.write('khong nam trong mang')
+       } 
+        
+    </script>
+</body>
+
+</html>

@@ -7,8 +7,34 @@
     <title>Document</title>
 </head>
 <body>
+    <label for="">nhap v</label>
+    <input type="text" id="value">
+    <button onclick="check()">kiem tra</button>
     <script>
-    
+    function check(){
+        var arr = [12,14,5,6,44,3,6,9,78,45];
+            let v = parseInt(document.getElementById("value").value); 
+            console.log(arr);
+            var count=0;
+            for (let i=0; i<arr.length; i++){
+                if (v == arr[i]){
+                    let x = i;
+                    count++;
+                    for( let j=x; j<arr.length; j++){
+                        arr[j] = arr[j+1]
+                        if ( j == arr.length-1){
+                            arr[j] = 0;
+                        }
+                    }
+                    console.log(arr);
+                 }
+                 if(i==arr.length-1 && count ==0){
+                     document.write(v + ' khong nam trong mang');
+                 }
+            } 
+    }
+ 
+            
     </script>
 </body>
 </html>

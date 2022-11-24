@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let hinh_chu_nhat = function ( chieu_dai,chieu_rong){
+
+            //khai bao thuoc tinh
+            this.chieu_dai= chieu_dai;
+            this.chieu_rong=chieu_rong;
+
+            // khai bao phuong thuc
+            this.tinh_dien_tich = function(){
+                return this.chieu_dai*this.chieu_rong;
+            }
+
+            this.tinh_chu_vi = function(){
+                return (this.chieu_dai+this.chieu_rong)*2
+            }
+
+                
+        }
+    // khoi tao doi tuong
+     let chu_nhat = new hinh_chu_nhat(12,58 )
+    //  goi phuong thuc chu vi 
+       console.log(chu_nhat.tinh_chu_vi());
+    //    phuong thuc tinh dien tichl
+       console.log(chu_nhat.tinh_dien_tich());
+    </script>
+</body>
+</html>

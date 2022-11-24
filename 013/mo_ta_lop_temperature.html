@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Temperature = function( ts_do_c,ts_do_f){
+            this.do_C= ts_do_c;
+            this.do_f=ts_do_f;
+         //khai bao gia tri thuoc tinh
+           this.tinh_don_vi = function(){
+             return 9/5 * this.do_C +32
+           }
+           this.tinh_don_vi_f = function(){
+            return this.do_f + 273.15
+           }
+        }
+        // khoi tao doi tuong 
+        let do_f = new Temperature(25,25);
+        // console.log(do_f.tinh_don_vi_f());
+        //  phuong thuc chuyen doi do c sang f
+         document.write('do F'+ "" +'='+do_f.tinh_don_vi() + '<br>' ) 
+         
+         
+         document.write('do k'+ "" +'='+do_f.tinh_don_vi_f() );
+       
+    </script>
+</body>
+</html>

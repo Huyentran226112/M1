@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- /* 
+        /*
+    ===================DOI TUONG===============
+    - cu phap doi tuong
+    • Cú pháp
+         var objectName = {};
+     hoặc
+        var objectName = { property1:value1, property2:value2 };    
+    c1: tao mot doi tuong gom thong tin cua ban than
+        var thong_tin ={
+            firstName: "huyen",
+            lastName: "tran",
+            age:22,
+            work: funstion (){
+                return "studen"
+            },
+            relax: function(){
+                return "music,game"
+            }    
+    c2: tu doi tuong do, tao them 2 phuong thuc work va relax
+    - truy cap thuoc tinh
+    - truy cap phuong thuc
+    ===================LOP===============
+    - cu phap tao lop
+    function person(tham so1,tham so 2 ){
+        this. tham so 1= tham so 1,
+        this. tham so 2= tham so 2
+    }
+
+    - tao thuoc tinh
+    - tao phuong thuc
+    - khoi tao doi tuong
+    - truy cap thuoc tinh
+    - truy cap phuong thuc
+    */
+        
+        
+        -->
+
+
+
+    <script>
+        // //  tao doi tuong
+        // var studen = {
+        //     firstName: "huyen",
+        //     lastName: "tran",
+        //     age: 22,
+        //     work: function() {
+        //         return "studen"
+        //     },
+        //     relax: function() {
+        //         return "music,game"
+        //     } ,
+        //     getInfor: function(){
+        //         return " ten"+this.firstName + "tuoi"+ this.age +"work"+this.work();
+        //     }   
+        // }
+        // console.log(studen.getInfor());
+        //  tao lop 
+
+        //  function person(firstName, lastName,age) {
+        //     this.firstName = firstName;
+        //     this.lastName = lastName;
+        //     this.age = age
+
+        // //  }
+        // let nho = {
+        //     ten: "nho ",
+        //     tuoi: 21,
+        //     so_thich: "the thao",
+
+        //     work: function () {
+        //         console.log(work);
+        //     },
+        //     relax: function () {
+        //         console.log(relax);
+        //     },
+
+        //     gioi_thieu() {
+        //         console.log('ten' + this.ten);
+        //         console.log('tuoi' + this.tuoi);
+        //         console.log('so thich' + this.so_thich);
+        //             this.work();
+        //             this.relax();
+        //     }
+
+        // }
+        // //  truy cap thuoc tinh
+        // console.log(nho.ten);
+        // console.log(nho.so_thich);
+        // console.log(nho.tuoi);
+        //  truy cap phuong thuc
+        // nho.work();
+        // nho.relax();
+        // nho.gioi_thieu();
+        let huyen ={
+            ten : "huyen",
+            tuoi: 22,
+            so_thich: "nghe nhac",
+            work:function() {
+                console.log( this.ten );
+                console.log(this.tuoi);
+                this.relax();
+                
+            },
+            relax:function() {
+                console.log ( 'relax' );
+            }
+
+
+
+        }
+        //  console.log(huyen.ten);
+        //  console.log(huyen.tuoi);
+        //  console.log(huyen.so_thich);
+        //  huyen.gioi_thieu()
+         huyen.relax();
+         huyen.work()
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

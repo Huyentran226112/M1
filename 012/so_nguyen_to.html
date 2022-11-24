@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = parseInt(prompt(('nhap so nguyen to vao day  '))) ;
+        so_nguyen_to(a);
+
+        function so_nguyen_to(a){
+            let b = 0;
+            if (a == 0) {
+                alert(a +' khong phai la so nguyen to ')
+            } else {
+                for (var i = 0; i <= a; i++) {
+                    if (a % i == 0) {
+                        b ++;
+                    }
+                } if ( b==2){
+                    alert(a +' la so nguyen to')
+                }else{
+                    alert(a+' khong phai la so nguyen to')
+
+                }
+                
+               } 
+               
+              }
+              
+    </script>
+</body>
+
+</html>

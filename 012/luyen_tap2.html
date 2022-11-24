@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+  <input type="text"id="nhap_gia_tri">
+  <button onclick="so()" >click</button>
 <body>
+
     <script>
-        function sum(a,b){
-            return a+b;
+        function so() {
+            let a = parseInt(document.getElementById('nhap_gia_tri').value);
+            c = a+1
+              alert(c)
         }
-        var total = sum(4,12);
-     alert(total)
-    
+       
+
     </script>
 </body>
+
 </html>
