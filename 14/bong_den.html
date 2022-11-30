@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body> <canvas id="myCanvas" width="200" height="100"></canvas>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.fillRect(100, 300, 200, 500)
+        class Electriclamp {
+            status = false;
+            constructor(status) {
+                this.status = status;
+            }
+            getStatus() {
+                if (this.status == false) {
+                    console.log('da tat den');
+                } else {
+                    console.log('da bat den');
+                }
+                return this.status;
+            }
+            setStatus(status) {
+                this.status = status;
+            }
+
+        }
+        class switchButton {
+            constructor(status = false, lamp) {
+                this.status = status;
+                this.lamp = lamp;
+            }
+            connectToLamp(Electriclamp) {
+                return this.lamp = Electriclamp;
+            }
+            switchOff() {
+                this.status = false;
+                console.log('da tat cong tat');
+                this.lamp.status = false;
+
+            }
+            switchOn() {
+                this.status = true;
+                console.log('da bat cong tat');
+                this.lamp.status = true;
+            }
+            getStatus() {
+                return this.status;
+            }
+        }
+
+
+        let den = new Electriclamp(true);
+        let cong_tat = new switchButton(true, den);
+
+        cong_tat.switchOn();
+        console.log(den.getStatus());
+        cong_tat.switchOff();
+        console.log(den.getStatus());
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

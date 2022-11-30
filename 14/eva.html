@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+            class Apple {
+                constructor() {
+                this.weight = 10;
+        }
+            decrease() {
+                this.weight--;
+        }
+            isEmpty() {
+            if( this.weight == 0 ){
+                return true;
+            }else{
+                return false;
+            }
+        }
+            getWeight() {
+            return this.weight;
+        }
+    }
+            class Human {
+                constructor(ts_name) {
+                this.name = ts_name;
+            this.gender = true;
+            this.weight = 0;
+        }
+            isMale() {
+            if( this.gender == true ){
+                return true;
+            }else{
+                return true;
+            }
+        }
+            setGender(ts_Gender) {
+                this.gender = ts_Gender;
+        }
+            checkApple(ts_Apple) {
+            return false;
+        }
+            eat(ts_Apple) {
+                // giam mieng tao
+                ts_Apple.decrease();
+            //tang weight
+            this.weight++
+        }
+            say(ts_noi_dung) {
+                console.log(ts_noi_dung);
+        }
+            getName() {
+            return this.name;
+        }
+            getWeight() {
+            return this.weight;
+        }
+            setWeight(ts_Weight) {
+                this.weight = ts_Weight;
+        }
+    }
+            let tao = new Apple();
+            let adam = new Human('Adam');
+            // Thay doi can nang
+            adam.setWeight(100);
+            //Thiet lap gioi tinh
+            adam.setGender(true);
+
+
+            let eva = new Human('Eva');
+            // thay doi can nang
+            eva.setWeight(80);
+            //thiet lap gioi tinh
+            eva.setGender(false);
+
+            while ( !tao.isEmpty() ) {
+                adam.eat(tao);
+            adam.say('Adam an tao xong noi: Em an di');
+            console.log('Can nang cua adam: ' + adam.getWeight());
+            eva.eat( tao );
+            eva.say('Eva an tao xong noi: Anh an di');
+            console.log('Can nang cua eva: ' + eva.getWeight());
+
+    }
+            console.log('Ket thuc cau chuyen');
+
+
+
+    </script>
+
+
+    </script>
+</body>
+
+</html>

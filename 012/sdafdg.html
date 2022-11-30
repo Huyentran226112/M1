@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+
+
+        <h2><b>Add new Product</b></h2>
+        <input type="text" placeholder="New Product" id="newProduct">
+        <input type="button" value="Add" onclick="them_sp();"><br>
+        <h2><b>Display All Product</b></h2>
+        <table style="width: 750px;">
+            <tr>
+                <td><b>Product Name</b></td>
+                <td>số sản phẩm</td>
+            </tr>
+
+        </table>
+        <div id="bang1"></div>
+    </form>
+    <script>
+
+        var product = [];
+        function them_sp() {
+            var add = document.getElementById("newProduct").value;
+            product.push(add);
+            bang(product);
+        }
+        function bang(product) {
+            let a, i;
+            a = "<table border='0' cellspacing='1' cellpadding='4' width='800px'>"
+            for (i = 0; i < product.length; i++) {
+                a = a + "<tr>"
+                a += "<td>" + product[i] + "</td>"
+                a += "<td> <input type='button' value='Edit' onclick='edit(" + i + ")' ></td>"
+                a += "<td> <input type='button' value='delete' onclick='dele(" + i + ")'></td>"
+                a = a + "</tr>"
+            }
+            a = a + "</table>";
+            document.getElementById("bang1").innerHTML = a;
+        }
+
+        function dele(index) {
+            product.splice(index, 1);
+            bang(product);
+        }
+        function edit(index) {
+            console.log(index);
+            var newname = prompt("nhập tên sp mới");
+            product[index] = newname;
+            bang(product);
+        }
+
+    </script>
+</body>
+</html>
